@@ -439,12 +439,12 @@ transition: width .3s;
 .home__social{
     height: max-content;
     position: absolute;
-    left: -2.5rem;
+    left: -2.3rem;
     top: 0;
     bottom: 0;
     margin: auto 0;
     display: grid;
-    row-gap: 2rem;
+    row-gap: 1rem;
 }
 
 .home__social-link {
