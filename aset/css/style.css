@@ -437,9 +437,9 @@ transition: width .3s;
 }
 
 .home__social{
-    height: max-content;
+    height: 60px;
     position: absolute;
-    left: -2.3rem;
+    left: -2.5rem;
     top: 0;
     bottom: 0;
     margin: auto 0;
