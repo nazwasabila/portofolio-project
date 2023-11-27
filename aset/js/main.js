@@ -35,6 +35,29 @@ const shadowHeader = () =>{
 }
 window.addEventListener('scroll', shadowHeader)
 
+const contactForm = document.getElementById('contact-form'),
+        contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    emailjs.sendForm('service_1gl9uio','template_vk2tscj','#contact-form','OxGf41pDdrwv-gLVL')
+    .then(() =>{
+        contactMessage.textContent = 'Message sent successfully ✅'
+
+        setTimeout(() =>{
+            contactMessage.textContent = ''
+        }, 5000)
+
+        contactForm.reset()
+        
+    }, () =>{
+        contactMessage.textContent = 'Message not sent ❌'
+    })
+}
+
+contactForm.addEventListener('submit', sendEmail)
+
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
@@ -64,6 +87,8 @@ const scrollActive = () =>{
 	})
 }
 window.addEventListener('scroll', scrollActive)
+
+
 
 /*=============== DARK LIGHT THEME ===============*/ 
 const themeButton = document.getElementById('theme-button')
